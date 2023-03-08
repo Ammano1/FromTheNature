@@ -1,0 +1,38 @@
+.header {
+	display: flex;
+	justify-content: center;
+	background-color: aliceblue;
+	width: 100vw;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.list {
+	display: flex;
+	justify-content: center;
+	gap: 0.8rem;
+}
+
+.list a {
+	text-decoration: none;
+	font-size: 2rem;
+	color: var(--color-font-main);
+	font-weight: bold;
+}
+
+.list a:hover,
+.list a.active {
+    color: var(--color-font-second);
+}
+
+@media (min-width: 576px) {
+	.list {
+		justify-content: space-between;
+		gap: 1.5rem;
+		min-width: 50vw;
+		max-width: 60rem;
+	}
+
+	.list a {
+		font-size: 2.2rem;
+	}
+}
