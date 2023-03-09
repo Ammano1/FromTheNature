@@ -28,6 +28,7 @@ body {
 	/* background-image: url('./assets/leaves-lg.jpg'); */
 	background-size: cover;
 	background-position: center;
+	font-size: 1.6rem;
 }
 
 code {

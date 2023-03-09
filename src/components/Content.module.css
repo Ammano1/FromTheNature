@@ -1,19 +1,26 @@
+h2 {
+	position: relative;
+	align-self: center;
+	margin-top: 0;
+	font-family: 'Yanone Kaffeesatz';
+	font-size: 2.9rem;
+	text-align: center;
+	padding-top: 0.3em;
+}
+
 .contentWrap {
 	display: flex;
 	flex-direction: column;
-    margin-top: 1em;
+	margin-top: 1em;
 	border: 1px solid rgba(133, 170, 133, 0.589);
 	border-radius: 5px;
 	padding: 2em;
-    background-color: var(--color-background-second);
+	background-color: var(--color-background-second);
 }
 
 .contentWrap h2 {
-	position: relative;
-	align-self: center;
-    margin-top: 0;
-    font-family: 'Yanone Kaffeesatz';
-    font-size: 2.2rem;
+	font-size: 2.2rem;
+	padding: 0;
 }
 
 .content {
@@ -39,18 +46,24 @@
 }
 
 @media (min-width: 576px) {
+	h2 {
+		margin-top: 0.2em;
+		font-size: 3.5rem;
+	}
+
 	.contentWrap {
 		display: flex;
 		flex-direction: column;
-        margin: 2em;
+		margin: 2em;
 		position: relative;
 		border: 1px solid rgba(133, 170, 133, 0.589);
 		border-radius: 5px;
 	}
 
-    .contentWrap h2 {
-        padding-left: 36%;
-    }
+	.contentWrap h2 {
+		padding-left: 36%;
+		font-size: 2.8rem;
+	}
 
 	.content {
 		display: flex;
@@ -61,17 +74,17 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-        width: 35%;
-        height: 100%;
+		width: 35%;
+		height: 100%;
 	}
 
-    .image img {
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-    }
+	.image img {
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
 
 	.text {
-        padding-left: 37%;
+		padding-left: 37%;
 		display: flex;
 		flex-direction: column;
 	}

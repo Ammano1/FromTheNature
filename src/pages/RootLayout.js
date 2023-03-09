@@ -1,16 +1,21 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import MainNavigation from '../components/MainNavigation'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import MainNavigation from '../components/MainNavigation';
+import Header from '../components/Header';
 
 function RootLayout() {
-  return (
-    <>
-    <MainNavigation />
-    <main>
-      <Outlet />
-    </main>
-    </>
-  )
+	return (
+		<>
+			<MainNavigation />
+			<main>
+				<Header
+					title='FromTheNature...'
+					description='Your source of health!'
+				/>
+				<Outlet />
+			</main>
+		</>
+	);
 }
 
-export default RootLayout
+export default RootLayout;
