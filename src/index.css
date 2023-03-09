@@ -1,16 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 :root {
 	font-size: 62.5%;
 
-  --color-font-main: #3B3B3B;
-  --color-font-second: #5f995f;
+	--color-font-main: #3b3b3b;
+	--color-font-second: #2b552bf8;
+	--shadow-light: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	--color-background-main: #09351ae5;
+	--color-background-second: #cbd1b036;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  left: 0;
+	box-sizing: border-box;
+	padding: 0;
+	left: 0;
 }
-
 
 body {
 	margin: 0;
@@ -19,7 +23,10 @@ body {
 		'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: rgb(245, 243, 240);
+	background-color: var(--color-background-main);
+	background-image: url('./assets/leaves-lg.jpg');
+	background-size: cover;
+	background-position: center;
 }
 
 code {
@@ -29,4 +36,3 @@ code {
 ul {
 	list-style: none;
 }
-
