@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
 
 :root {
 	font-size: 62.5%;
@@ -6,7 +7,7 @@
 	--color-font-main: #3b3b3b;
 	--color-font-second: #2b552bf8;
 	--shadow-light: 1px 1px 5px rgba(0, 0, 0, 0.2);
-	--color-background-main: #09351ae5;
+	--color-background-main: #f9f8f6;
 	--color-background-second: #cbd1b036;
 }
 
@@ -24,7 +25,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: var(--color-background-main);
-	background-image: url('./assets/leaves-lg.jpg');
+	/* background-image: url('./assets/leaves-lg.jpg'); */
 	background-size: cover;
 	background-position: center;
 }

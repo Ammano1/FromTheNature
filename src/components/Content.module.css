@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap"); 
-
 .contentWrap {
-    margin-top: 1em;
 	display: flex;
 	flex-direction: column;
+    margin-top: 1em;
 	border: 1px solid rgba(133, 170, 133, 0.589);
 	border-radius: 5px;
 	padding: 2em;
@@ -11,11 +9,9 @@
 }
 
 .contentWrap h2 {
-    margin-top: 0;
-	align-self: center;
-	font-size: 2rem;
-	margin-top: 0;
 	position: relative;
+	align-self: center;
+    margin-top: 0;
     font-family: 'Yanone Kaffeesatz';
     font-size: 2.2rem;
 }
@@ -44,10 +40,10 @@
 
 @media (min-width: 576px) {
 	.contentWrap {
-        margin: 2em;
-		position: relative;
 		display: flex;
 		flex-direction: column;
+        margin: 2em;
+		position: relative;
 		border: 1px solid rgba(133, 170, 133, 0.589);
 		border-radius: 5px;
 	}

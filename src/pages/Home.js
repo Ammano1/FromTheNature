@@ -4,11 +4,14 @@ import Card from '../components/UI/Card';
 import tangerines from '../assets/tangerines.jpg';
 import blueberries from '../assets/blueberries-sm.jpg';
 import avocado from '../assets/avocado.jpg';
+import Header from '../components/Header';
 
 function HomePage() {
 	return (
+		<>
+		<Header title='FromTheNature...' description='Your source of health'/>
+
 		<Card>
-			<h1>FromTheNature...</h1>
 			<Content
 				title={'The best fruits and veggies for your bliss!'}
 				img={tangerines}
@@ -62,6 +65,7 @@ function HomePage() {
 				</p>
 			</Content>
 		</Card>
+		</>
 	);
 }
 

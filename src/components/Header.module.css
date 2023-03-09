@@ -1,0 +1,38 @@
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	height: 300px;
+	background-image: url('../assets/Naturelg.jpg');
+	background-position: center;
+	background-size: cover;
+	background-blend-mode: saturation;
+}
+
+h1 {
+	font-size: 4.5rem;
+	font-family: 'Shadows Into Light';
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.562);
+	color: rgb(247, 247, 247);
+	z-index: 1;
+}
+
+.header p {
+	margin-top: 0;
+	font-family: 'Yanone Kaffeesatz';
+	color: rgb(247, 247, 247);
+	font-size: 2.7rem;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.562);
+	z-index: 1;
+}
+
+.shadowBg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.137);
+	z-index: 0;
+}
