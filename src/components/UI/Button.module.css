@@ -1,0 +1,16 @@
+button {
+	border-radius: 5px;
+	width: 6em;
+	height: 2.5em;
+	background-color: orangered;
+	color: aliceblue;
+	font-family: 'Yanone Kaffeesatz';
+	letter-spacing: 2px;
+	font-size: 2.5rem;
+	font-weight: bold;
+	border: none;
+	box-shadow: 1px 1px 5px rgb(117, 115, 115);
+	margin: 1em;
+    text-shadow: 1px 1px 1px rgb(56, 55, 55);
+    cursor: pointer;
+}

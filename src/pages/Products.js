@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../components/UI/Card';
-import Content from '../components/Content';
+import Content from '../components/Layout/Content';
 import carrots from '../assets/carrots.jpg';
 import farmers from '../assets/farmerssm.jpg';
 import veggies from '../assets/woman-with-veggies.jpg';
@@ -8,7 +8,6 @@ import veggies from '../assets/woman-with-veggies.jpg';
 function ProductsPage() {
 	return (
 		<Card>
-			<h2>Our Products:</h2>
 			<Content
 				title={'Organically grown'}
 				img={carrots}

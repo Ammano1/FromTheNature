@@ -1,5 +1,5 @@
 import React from 'react';
-import Content from '../components/Content';
+import Content from '../components/Layout/Content';
 import Card from '../components/UI/Card';
 import farm from '../assets/farm.jpg'
 import plants from '../assets/plantsm.jpg'

@@ -1,5 +1,5 @@
 import React from 'react';
-import Content from '../components/Content';
+import Content from '../components/Layout/Content';
 import Card from '../components/UI/Card';
 import tangerines from '../assets/tangerines.jpg';
 import blueberries from '../assets/blueberries-sm.jpg';
