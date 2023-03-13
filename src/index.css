@@ -38,3 +38,7 @@ code {
 ul {
 	list-style: none;
 }
+
+h2, h3 {
+	font-family: 'Yanone Kaffeesatz';
+}

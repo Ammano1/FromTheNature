@@ -1,0 +1,36 @@
+.cartButton {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5vh;
+    left: 65vw;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    z-index: 40;
+}
+
+.cartItems {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    top: 65%;
+    left: 72%;
+    text-shadow: var(--shadow-light)
+}
+
+@media (min-width: 576px) {
+    .cartButton {
+        top: 80px;
+        left: 80vw;
+        width: 80px;
+        height: 80px;
+    }
+    .cartItems {
+        top: 65%;
+        left: 70%;
+    }
+}

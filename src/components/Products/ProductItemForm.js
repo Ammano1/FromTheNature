@@ -1,16 +1,32 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import classes from './ProductItemForm.module.css';
 import Button from '../UI/Button';
+import Input from '../UI/Input';
 
-function ProductItemForm() {
+function ProductItemForm(props) {
+    const amountInputRef = useRef()
+
+    const submitHandler = event => {
+        event.preventDefault();
+
+        const enteredAmount = amountInputRef.current.value
+
+        props.onAddToCart(enteredAmount)
+    }
+
 	return (
-		<form>
-            <label htmlFor='amount'>Amount</label>
-            <input type='number' id='amount'
-            min='1'
-            max='20'
-            step='1'
-            defaultValue='1'></input>
+		<form onSubmit = {submitHandler}>
+            <Input label='Amount'
+            ref={amountInputRef}
+            input={{
+                id: 'amount',
+                type:'number',
+                min:'1',
+                max:'99',
+                step:'1',
+                defaultValue:'1',
+            }}
+            />
 			<Button>Add</Button>
 		</form>
 	);
