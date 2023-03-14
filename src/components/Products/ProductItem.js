@@ -15,7 +15,7 @@ function ProductItem(props) {
 				id: id,
 				name: name,
 				price: price,
-				quantity: amount,
+				quantity: +amount,
 				totalItemPrice: amount * price,
 			})
 		);
@@ -26,7 +26,7 @@ function ProductItem(props) {
 			<div className={classes.img}>
 				<img
 					src={props.img}
-					alt={props.imgAlt}
+					alt={props.alt}
 				/>
 			</div>
 			<div className={classes.titleSection}>

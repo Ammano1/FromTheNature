@@ -7,7 +7,7 @@ const CartButton = props =>{
 		<>
 			<button className={classes.cartButton} onClick={props.showCart}>
 				<CartIcon />
-                <div className={classes.cartItems}>10</div>
+                <div className={classes.cartItems}>{props.amount}</div>
 			</button>
 		</>
 	);

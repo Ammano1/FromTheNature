@@ -11,15 +11,16 @@ import Cart from '../components/Cart/Cart';
 function RootLayout() {
 	const dispatch = useDispatch();
 	const showCart = useSelector(state => state.ui.cartIsVisible);
+	const amount = useSelector(state => state.cart.totalQuanity);
 
 	const toggleCartHandler = () => {
-		dispatch(uiActions.toggle())
-	}
+		dispatch(uiActions.toggle());
+	};
 
 	return (
 		<>
 			<MainNavigation />
-			{!showCart && <CartButton showCart={toggleCartHandler}/>}
+			{!showCart && <CartButton showCart={toggleCartHandler} amount={amount}/>}
 			{showCart && <Cart onClose={toggleCartHandler} />}
 			<main>
 				<Header

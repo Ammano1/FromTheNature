@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     top: 5vh;
-    left: 65vw;
+    left: 60vw;
     border-radius: 100%;
     width: 80px;
     height: 80px;
@@ -19,7 +19,7 @@
     font-size: 1.4rem;
     top: 65%;
     left: 72%;
-    text-shadow: var(--shadow-light)
+    text-shadow: 1px 1px 1px black
 }
 
 @media (min-width: 576px) {

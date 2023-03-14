@@ -14,3 +14,12 @@ button {
     text-shadow: 1px 1px 1px rgb(56, 55, 55);
     cursor: pointer;
 }
+
+button:hover
+
+{
+	background-color: rgb(238, 79, 6);
+}
+button:active {
+	transform: scale(0.95);
+}

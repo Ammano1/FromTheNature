@@ -56,6 +56,7 @@ const createList = LIST_OF_PRODUCTS.map(prd => (
 		name={prd.name}
 		price={prd.price}
 		img={prd.img}
+		alt={prd.alt}
 		description={prd.description}
 	/>
 ));

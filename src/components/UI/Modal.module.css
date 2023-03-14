@@ -10,9 +10,11 @@
 
 .modal {
 	position: fixed;
-	top: 15vh;
-	left: 5%;
+	top: 10vh;
 	width: 90%;
-	background-color: var(--color-background-main);
-    z-index: 30;
+	left: 50%;
+	transform: translateX(-50%);
+	right: 5%;
+	max-width: 1000px;
+	z-index: 30;
 }
