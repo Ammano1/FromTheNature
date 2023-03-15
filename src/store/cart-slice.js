@@ -40,6 +40,10 @@ const cartSlice = createSlice({
 					existingItem.quantity--;
 					existingItem.totalItemPrice -= existingItem.price;
 				}
+
+				if (state.totalPrice < 0) {
+					state.totalPrice = 0;
+				}
 			}
 		},
 		removeItemsFromCart(state, action) {

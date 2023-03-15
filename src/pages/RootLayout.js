@@ -14,7 +14,7 @@ function RootLayout() {
 	const amount = useSelector(state => state.cart.totalQuanity);
 
 	const toggleCartHandler = () => {
-		dispatch(uiActions.toggle());
+		dispatch(uiActions.toggleCart());
 	};
 
 	return (

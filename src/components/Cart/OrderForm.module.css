@@ -1,0 +1,81 @@
+.order {
+	display: flex;
+	flex-direction: column;
+	width: 85%;
+	max-height: 30em;
+}
+
+.order form {
+	box-shadow: inset var(--shadow-light);
+	margin-top: 0.5em;
+	overflow: auto;
+	max-height: 18em;
+	background-color: var(--color-background-main);
+}
+
+.orderForm {
+	background-color: black;
+}
+
+.order label {
+	margin: 0.4em 0em;
+	font-weight: bold;
+}
+.order input {
+	width: 85%;
+}
+
+.order form button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 8em;
+	padding: 1em;
+	font-size: 2rem;
+}
+
+.totalAmount {
+	font-weight: bold;
+	font-size: 3rem;
+}
+
+.address input {
+	height: 10em;
+}
+
+.actions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.buttons {
+	display: flex;
+}
+
+.buttons button {
+	padding: 0.2em;
+	width: 5em;
+	font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+	.order input {
+		width: 15em;
+	}
+
+	.order form {
+        padding: 1em;
+		display: flex;
+        justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+		margin-top: 0.5em;
+		height: 35em;
+		gap: 1em;
+	}
+
+    .amount {
+        padding-top: 0.5em;
+    }
+}

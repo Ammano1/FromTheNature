@@ -1,15 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialUiState = {
-    cartIsVisible: false
+    cartIsVisible: false,
+    isOrdering: false
 }
 
 const uiSlice = createSlice({
     name: 'ui',
     initialState: initialUiState,
     reducers: {
-        toggle(state) {
+        toggleCart(state) {
             state.cartIsVisible = !state.cartIsVisible
+        },
+        toogleOrder(state) {
+            state.isOrdering = !state.isOrdering
         }
     }
 })
