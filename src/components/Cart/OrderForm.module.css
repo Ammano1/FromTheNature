@@ -6,23 +6,22 @@
 }
 
 .order form {
-	box-shadow: inset var(--shadow-light);
 	margin-top: 0.5em;
-	overflow: auto;
 	max-height: 18em;
+	box-shadow: inset var(--shadow-light);
 	background-color: var(--color-background-main);
-}
-
-.orderForm {
-	background-color: black;
-}
+	overflow: auto;
+}	
 
 .order label {
 	margin: 0.4em 0em;
 	font-weight: bold;
 }
 .order input {
+	border-radius: 5px;
 	width: 85%;
+	border: 0.5px solid;
+	border-color: rgb(167, 160, 173);
 }
 
 .order form button {
@@ -34,13 +33,20 @@
 	font-size: 2rem;
 }
 
+.error {
+	display: block;
+	height: 1em;
+	top: 0;
+	color: brown;
+	margin: 0.3em 0 0 0;
+	font-size: 1.4rem;
+
+}
+
 .totalAmount {
 	font-weight: bold;
 	font-size: 3rem;
-}
-
-.address input {
-	height: 10em;
+	margin: 0.5em 0 0 0;
 }
 
 .actions {
@@ -65,17 +71,29 @@
 	}
 
 	.order form {
-        padding: 1em;
+		padding: 1em;
 		display: flex;
-        justify-content: center;
-		flex-wrap: wrap;
+		justify-content: center;
 		flex-direction: row;
-		margin-top: 0.5em;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		margin: 0.5em 0 0 0 ;
 		height: 35em;
 		gap: 1em;
+		column-gap: 1.5em;
 	}
 
-    .amount {
-        padding-top: 0.5em;
-    }
+	.amount {
+		padding-top: 0.5em;
+	}
+
+	.order form button {
+		margin: 1em 1.5em;
+		height: 3em;
+		width: 12em;
+	}
+
+	 .error {
+		align-self: center;
+	}
 }
