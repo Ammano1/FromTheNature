@@ -18,7 +18,7 @@ const initialPersonState = {
 	},
 	isFirstTry: true,
 	isFormValid: false,
-    isSending: false
+	isSending: false,
 };
 
 const orderSlice = createSlice({
@@ -61,34 +61,31 @@ const orderSlice = createSlice({
 			state.personIsValid.isPhoneValid = isPhone(newPerson.phone);
 			state.personIsValid.cityIsNotEmpty = isInputEmpty(newPerson.city);
 			state.personIsValid.streetIsNotEmpty = isInputEmpty(newPerson.street);
-            
 
-			for (const property in state.personIsValid) {
-				if (state.personIsValid[property] === false) {
-					state.isFormValid = false;
-				} else {
-					state.isFormValid = true;
-				}
+			if (
+				state.personIsValid.nameIsNotEmpty &&
+				state.personIsValid.isEmailValid &&
+				state.personIsValid.isPhoneValid &&
+				state.personIsValid.cityIsNotEmpty &&
+				state.personIsValid.streetIsNotEmpty
+			) {
+				const newPerson = action.payload;
+				state.person.id = newPerson.id;
+				state.person.name = newPerson.name;
+				state.person.email = newPerson.email;
+				state.person.phone = newPerson.phone;
+				state.person.city = newPerson.city;
+				state.person.street = newPerson.street;
+
+				state.isSending = true;
 			}
-
-            if(state.isFormValid === true) {
-                state.person.id = newPerson.id;
-                state.person.name = newPerson.name;
-                state.person.email = newPerson.email;
-                state.person.phone = newPerson.phone;
-                state.person.city = newPerson.city;
-                state.person.street = newPerson.street;
-    
-                state.isSending = true
-            }
-
 		},
 		isFirtTry(state) {
 			state.isFirstTry = false;
 		},
-        isSending(state) {
-            state.isSending = !state.isSending
-        }
+		isSending(state) {
+			state.isSending = !state.isSending;
+		},
 	},
 });
 

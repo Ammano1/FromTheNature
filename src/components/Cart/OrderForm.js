@@ -15,6 +15,7 @@ function OrderForm(props) {
 	
 
 	const isFirstTry = useSelector(state => state.order.isFirstTry);
+	const isFormValid = useSelector(state => state.order.isFormValid);
 	const person = useSelector(state => state.order.person)
 
 	const inputHandler = (property) => {
