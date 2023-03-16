@@ -12,9 +12,30 @@ function OrderForm(props) {
 	const phoneInputRef = useRef();
 	const cityInputRef = useRef();
 	const streetInputRef = useRef();
+	
 
 	const isFirstTry = useSelector(state => state.order.isFirstTry);
-	const isFormValid = useSelector(state => state.order.isFormValid);
+	const person = useSelector(state => state.order.person)
+
+	const inputHandler = (property) => {
+		switch(property) {
+			case 'name':
+				return person.name
+			case 'email':
+				return person.email
+			case 'phone':
+				return person.phone
+			case 'city':
+				return person.city
+			case 'street':
+				return person.street
+
+			default:
+				return ''
+		}
+
+	}
+
 
 	const nameIsNotEmpty = useSelector(state => state.order.personIsValid.nameIsNotEmpty);
 	const isEmailValid = useSelector(state => state.order.personIsValid.isEmailValid);
@@ -25,14 +46,6 @@ function OrderForm(props) {
 	const messaggeIsEmpty = 'Minimum: 3 characters. ';
 	const messaggeIsEmail = 'Please enter a valid email. ';
 	const messaggeIsPhoneValid = 'Please enter a valid phone number';
-
-	const cleanInputs = () => {
-		nameInputRef.current.value = '';
-		emailInputRef.current.value = '';
-		phoneInputRef.current.value = '';
-		cityInputRef.current.value = '';
-		streetInputRef.current.value = '';
-	};
 
 	const submitHandler = event => {
 		event.preventDefault();
@@ -53,13 +66,8 @@ function OrderForm(props) {
 
 		dispatch(orderActions.isFirtTry());
 
-		dispatch(orderActions.isFormValid(newPerson));
-		if (isFormValid) {
-			dispatch(orderActions.addPerson(newPerson));
-			cleanInputs()
-		} else {
-			return;
-		}
+		dispatch(orderActions.addPerson(newPerson));
+		
 	};
 
 	return (
@@ -74,6 +82,7 @@ function OrderForm(props) {
 					input={{
 						id: 'name',
 						type: 'text',
+						defaultValue: inputHandler('name')
 					}}>
 					<p className={classes.error}>{!isFirstTry && !nameIsNotEmpty && messaggeIsEmpty}</p>
 				</Input>
@@ -83,6 +92,7 @@ function OrderForm(props) {
 					input={{
 						id: 'email',
 						type: 'text',
+						defaultValue: inputHandler('email')
 					}}>
 					<p className={classes.error}>{!isFirstTry && !isEmailValid && messaggeIsEmail}</p>
 				</Input>
@@ -92,6 +102,7 @@ function OrderForm(props) {
 					input={{
 						id: 'phone',
 						type: 'tel',
+						defaultValue: inputHandler('phone')
 					}}>
 					<p className={classes.error}>{!isFirstTry && !isPhoneValid && messaggeIsPhoneValid}</p>
 				</Input>
@@ -101,15 +112,17 @@ function OrderForm(props) {
 					input={{
 						id: 'city',
 						type: 'text',
+						defaultValue: inputHandler('city')
 					}}>
 					<p className={classes.error}>{!isFirstTry && !cityIsNotEmpty && messaggeIsEmpty}</p>
 				</Input>
 				<Input
 					ref={streetInputRef}
 					label='Street'
-					input={{
+					input={{ 
 						id: 'street',
 						type: 'text',
+						defaultValue: inputHandler('street')
 					}}>
 					<p className={classes.error}>{!isFirstTry && !streetIsNotEmpty && messaggeIsEmpty}</p>
 				</Input>

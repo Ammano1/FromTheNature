@@ -4,7 +4,6 @@ import Card from '../components/UI/Card';
 import tangerines from '../assets/tangerines.jpg';
 import blueberries from '../assets/blueberries-sm.jpg';
 import avocado from '../assets/avocado.jpg';
-import Modal from '../components/UI/Modal';
 
 function HomePage() {
 	return (

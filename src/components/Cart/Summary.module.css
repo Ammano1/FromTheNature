@@ -1,0 +1,47 @@
+.order {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.9rem;
+    max-height: 20em;
+    /* gap: 6em; */
+}
+
+.order li {
+    margin: 0 0 0.5em 0;
+}
+
+.order span, .price {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.items {
+    overflow: auto;
+}
+
+.price {
+    width: 100%;
+    font-size: 2.2rem;
+    border-top: 1px solid black;
+    padding: 0.5em 0 0 0 ;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+}
+.actions button{
+    padding: 0.2em;
+	width: 5.5em;
+	font-size: 2rem;
+}
+@media (min-width: 576px) {
+    .order {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.9rem;
+        gap: 6em;
+    }
+}
+
+

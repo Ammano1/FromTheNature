@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import classes from './ProductItemForm.module.css';
 import Button from '../UI/Button';
 import Input from '../UI/Input';
 

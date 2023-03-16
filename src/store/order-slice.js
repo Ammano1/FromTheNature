@@ -18,6 +18,7 @@ const initialPersonState = {
 	},
 	isFirstTry: true,
 	isFormValid: false,
+    isSending: false
 };
 
 const orderSlice = createSlice({
@@ -25,15 +26,6 @@ const orderSlice = createSlice({
 	initialState: initialPersonState,
 	reducers: {
 		addPerson(state, action) {
-			const newPerson = action.payload;
-			state.person.id = newPerson.id;
-			state.person.name = newPerson.name;
-			state.person.email = newPerson.email;
-			state.person.phone = newPerson.phone;
-			state.person.city = newPerson.city;
-			state.person.street = newPerson.street;
-		},
-		isFormValid(state, action) {
 			const newPerson = action.payload;
 			const regPhone = new RegExp(
 				/^(?:(?:(?:(?:\+|00)\d{2})?[ -]?(?:(?:\(0?\d{2}\))|(?:0?\d{2})))?[ -]?(?:\d{3}[- ]?\d{2}[- ]?\d{2}|\d{2}[- ]?\d{2}[- ]?\d{3}|\d{7})|(?:(?:(?:\+|00)\d{2})?[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}))$/
@@ -69,6 +61,7 @@ const orderSlice = createSlice({
 			state.personIsValid.isPhoneValid = isPhone(newPerson.phone);
 			state.personIsValid.cityIsNotEmpty = isInputEmpty(newPerson.city);
 			state.personIsValid.streetIsNotEmpty = isInputEmpty(newPerson.street);
+            
 
 			for (const property in state.personIsValid) {
 				if (state.personIsValid[property] === false) {
@@ -77,10 +70,25 @@ const orderSlice = createSlice({
 					state.isFormValid = true;
 				}
 			}
+
+            if(state.isFormValid === true) {
+                state.person.id = newPerson.id;
+                state.person.name = newPerson.name;
+                state.person.email = newPerson.email;
+                state.person.phone = newPerson.phone;
+                state.person.city = newPerson.city;
+                state.person.street = newPerson.street;
+    
+                state.isSending = true
+            }
+
 		},
 		isFirtTry(state) {
 			state.isFirstTry = false;
 		},
+        isSending(state) {
+            state.isSending = !state.isSending
+        }
 	},
 });
 

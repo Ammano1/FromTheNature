@@ -25,6 +25,19 @@
 	width: 4em;
 }
 
+.emptyCart {
+	text-align: center;
+	display: grid;
+	place-items: center;
+	text-decoration: none;
+	width: 60%;
+	height: 10em;
+	color: black;
+	border: 1px solid black;
+	border-radius: 5px;
+	font-size: 2.0rem;
+}
+
 .totalAmount {
 	margin: 0;
 	font-family: 'Yanone Kaffeesatz';
